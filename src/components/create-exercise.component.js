@@ -73,7 +73,7 @@ export default class CreateExercise extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>Username: </label>
-                        <select ref="userInput" required className="form-control"
+                        <select  required className="form-control"
                                 value={this.state.username} onChange={this.handleUsernameChange}>
                                     {this.state.users.map(function(user) {
                                         return <option key={user} value={user}>{user}</option>;

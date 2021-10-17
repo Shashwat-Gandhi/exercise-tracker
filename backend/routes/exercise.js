@@ -39,7 +39,7 @@ router.get('/:id',(req,res) => {
 router.patch('/update/:id', (req,res) => {
    const newEx = {
        username : req.body.username,
-       descriptioon : req.body.description,
+       description : req.body.description,
        duration : req.body.duration,
        date : req.body.date,
    }

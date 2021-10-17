@@ -81,7 +81,7 @@ export default class EditExercise extends Component {
 
     console.log(exercise);
     console.log(this.props);
-    axios.post('http://localhost:5000/exercises/update/'+this.props.match.params.id, exercise)
+    axios.patch('http://localhost:5000/exercises/update/'+this.props.match.params.id, exercise)
       .then(res => {
           console.log(res.data)
           window.location = '/';
@@ -97,7 +97,7 @@ export default class EditExercise extends Component {
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Username: </label>
-            <select ref="userInput"
+            <select 
                 className="form-control"
                 value={this.state.username}
                 onChange={this.onChangeUsername}>
