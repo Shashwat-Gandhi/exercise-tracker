@@ -43,7 +43,12 @@ export default class CreateExercise extends React.Component {
         console.log(exercise);
         axios.post('http://localhost:5000/exercises/add/', exercise).then(res=> console.log(res.data))
         .catch(err => console.log(err));
-        
+        this.setState ( {
+            description : '', 
+            date : new Date(),
+            duration : 0,
+        });
+        alert('upload success');
     }
     handleUsernameChange(e) {
         this.setState({

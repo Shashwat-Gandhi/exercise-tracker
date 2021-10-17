@@ -20,6 +20,7 @@ export default class CreateUser extends React.Component {
         this.setState({
             username : '',
         })
+        alert('user added');
     }
     handleUsernameChange(e) {
         this.setState({
