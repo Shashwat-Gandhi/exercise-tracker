@@ -21,7 +21,7 @@ export default class CreateExercise extends React.Component {
         };
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/users/').then(res => {
+        axios.get('https://exercise-tracker-backend123.herokuapp.com/users/').then(res => {
             if(res.data.length > 0) {
                 this.setState({
                     users : res.data.map((user) => user.username),
@@ -41,7 +41,7 @@ export default class CreateExercise extends React.Component {
         };
 
         console.log(exercise);
-        axios.post('http://localhost:5000/exercises/add/', exercise).then(res=> console.log(res.data))
+        axios.post('https://exercise-tracker-backend123.herokuapp.com/exercises/add/', exercise).then(res=> console.log(res.data))
         .catch(err => console.log(err));
         this.setState ( {
             description : '', 

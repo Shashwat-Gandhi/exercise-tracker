@@ -25,14 +25,14 @@ export default class ExercisesList extends React.Component {
     }
     deleteExercise(id) {
         const exercises = this.state.exercises;
-        axios.delete('http://localhost:5000/exercises/' + id).then(res => {
+        axios.delete('https://exercise-tracker-backend123.herokuapp.com/exercises/' + id).then(res => {
             this.setState({
                 exercises : exercises.filter((el) => el._id !== id),
             })
         }).catch(err => console.log(err));
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/exercises/').then(res => {
+        axios.get('https://exercise-tracker-backend123.herokuapp.com/exercises/').then(res => {
             this.setState({
                 exercises : res.data,
             });

@@ -16,7 +16,7 @@ export default class CreateUser extends React.Component {
             username : this.state.username,
         }
         console.log(newUser);
-        axios.post('http://localhost:5000/users/add', newUser).then(res => console.log(res.data));
+        axios.post('https://exercise-tracker-backend123.herokuapp.com/users/add', newUser).then(res => console.log(res.data));
         this.setState({
             username : '',
         })
